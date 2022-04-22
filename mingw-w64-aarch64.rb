@@ -65,6 +65,11 @@ class MingwW64Aarch64 < Formula
       arch_dir = "#{prefix}/toolchain-#{arch}"
       target = "#{arch}-w64-mingw32"
 
+      case arch
+      when "aarch64"
+        target = "#{arch}-apple-darwin"
+      end
+
       resource("binutils").stage do
         args = %W[
           --target=#{target}
