@@ -100,7 +100,7 @@ class MingwW64Aarch64 < Formula
         --with-sysroot=#{arch_dir}
         --prefix=#{arch_dir}
         --with-bugurl=#{tap.issues_url}
-        --enable-languages=c,c++,fortran
+        --enable-languages=c,c++
         --with-ld=#{arch_dir}/bin/#{target}-ld
         --with-as=#{arch_dir}/bin/#{target}-as
         --with-gmp=#{Formula["gmp"].opt_prefix}
